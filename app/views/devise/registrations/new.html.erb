@@ -1,9 +1,10 @@
+
 <div class="contents row">
   <div class="container">
     <h2>新規登録</h2>
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
 
-      <%= render 'shared/error_messages', model: f.object %>
+      <%= render 'shared/error_messages', model: f.object %><br />
     
       <div class="field">
         <%= f.label :last_name %><br />
@@ -32,6 +33,9 @@
 
       <div class="actions">
         <%= f.submit "登録" %>
+      </div>
+      <div class="actions">
+        <%= link_to "トップページ","/" %>
       </div>
     <% end %>
   </div>
