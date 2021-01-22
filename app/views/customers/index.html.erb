@@ -1,0 +1,30 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      Staff Friend
+    </h2>
+    <p class='service-explain'>
+      ショップアテンダントの毎日をサポートします。
+    </p>
+  <div class='nav'>
+    <div class='lists-right'>
+      <% if user_signed_in? %>
+        <div>
+          <%= link_to current_user.last_name, class: "user-name" %>&nbsp;&nbsp;
+          <%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %><br><br>
+          <p>メニュー</p>
+          <%= link_to '☆顧客管理'%>&nbsp;&nbsp;
+          <%= link_to '☆テスター管理'%>&nbsp;&nbsp;
+          <%= link_to '☆メッセージ'%>&nbsp;&nbsp;
+          <%= link_to '☆業務スケジュール'%>
+        </div>
+      <% else %>
+        <li><%= link_to 'ログイン', "/users/sign_in", class: "login" %></li>
+        <li><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></li>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
