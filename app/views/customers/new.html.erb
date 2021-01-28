@@ -1,7 +1,8 @@
 <%= render "shared/header" %>
-<div class= "item-sell-contents">
+<div class="items-sell-contents">
+  <header class="items-sell-header"></header>
   <div class="items-sell-main">
-    <h2 class="items-sell-title">顧客の情報を入力</h2>
+    <h2 class="items-sell-title">顧客様の情報を入力</h2>
     <%= form_with model:@customers, local: true do |f| %>
 
     <%#= render 'shared/error_messages', model: f.object %>
@@ -51,5 +52,5 @@
       </div>
   </div>
   <% end %>
-</div>
+  <footer class="items-sell-footer"></footer>
 <%= render "shared/footer" %>
