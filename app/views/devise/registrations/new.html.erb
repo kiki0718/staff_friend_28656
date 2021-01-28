@@ -30,8 +30,11 @@
         <%= f.label :password_confirmation %><br />
         <%= f.password_field :password_confirmation, placeholder:"同じパスワードを入力して下さい" %>
       </div>
-        <%= f.submit "登録" %>
-        <input type="button" value="トップページ" onClick="location.href='/';">
+      <br />
+      <div class="sell-btn-contents">
+        <%= f.submit "登録" ,class:"sell-btn" %>
+        <%=link_to 'トップページ', root_path, class:"back-btn" %>
+      </div>
     <% end %>
   </div>
 </div>

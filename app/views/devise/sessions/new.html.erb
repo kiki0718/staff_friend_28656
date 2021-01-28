@@ -15,12 +15,10 @@
         <%= f.label :password %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
-
-      <div class="actions">
-        <%= f.submit "ログイン" %>
-      </div>
-      <div class="actions">
-        <%= link_to "トップページ","/" %>
+      <br />
+      <div class="sell-btn-contents">
+        <%= f.submit "ログイン" ,class:"sell-btn" %>
+        <%=link_to 'トップページ', root_path, class:"back-btn" %>
       </div>
     <% end %>
   </div>
