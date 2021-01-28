@@ -15,10 +15,12 @@
           <%= link_to current_user.last_name, class: "user-name" %>&nbsp;&nbsp;
           <%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %><br><br>
           <p>メニュー</p>
-          <%= link_to '☆顧客管理', "/customers/new" %>&nbsp;&nbsp;
-          <%= link_to '☆テスター管理'%>&nbsp;&nbsp;
-          <%= link_to '☆メッセージ'%>&nbsp;&nbsp;
-          <%= link_to '☆業務スケジュール'%>
+          <p>☆顧客管理☆</p>&nbsp;&nbsp;
+          <%= link_to '★新規登録', "/customers/new" %>&nbsp;&nbsp;
+          <%= link_to '★登録顧客一覧', "" %>&nbsp;&nbsp;
+          <p>☆テスター管理☆※準備中</p>
+          <p>☆業務スケジュール☆※準備中</p>
+          <p>☆メッセージ☆※準備中</p>
         </div>
       <% else %>
         <li><%= link_to 'ログイン', "/users/sign_in", class: "login" %></li>
